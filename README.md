@@ -1,8 +1,8 @@
-# Final2Novel
+{ # Final2Novel
 Novel about Dinos
 
 
-{
+
 text = open("/content/dinos.txt", "r").read()
 
 
@@ -101,11 +101,11 @@ css = CSS(string='''
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 body {
 font-family: 'Times New Roman', serif;
-}
+
 
 hr {
   break-after: recto; 
-}
+
 
 h1 {
   font-size: 50pt;
@@ -116,12 +116,12 @@ h1 {
 h2{
   break-before: recto;
   font-family: 'Festive',cursive;
-}
+
 
 h3 {
   font-size: 20pt;
   text-align:center;
-}
+
 
 /* set the basic page geometry and start the incrementer */
 @page {
@@ -134,8 +134,8 @@ h3 {
     text-align:center;
     font-style: italic;
     color: #666666;
-  }
-}
+  
+
 
 /* print the page number on the bottom-right of recto pages */
 @page :right {
@@ -144,8 +144,8 @@ h3 {
     text-align:right;
     color: #666666;
     visibility: invisible;
-  }
-}
+ 
+
 
 /* print the page number on the bottom-left of verso pages */
 @page :left {
@@ -153,15 +153,15 @@ h3 {
     content: "[" counter(page) "]";
     text-align:left;
     color: #666666;
-  }
-}
+  
+
 
 /* blank the footer on the first page */
 @page:first{
   @bottom-left {content: ""}
   @bottom-right {content: ""}
   @bottom-center {content: ""}
-}
+
 
 
 ''', font_config=font_config)
